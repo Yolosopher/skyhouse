@@ -13,7 +13,7 @@ const burger = document.getElementById('burger')
 const respomenu = document.getElementById('respomenu')
 const matchmadia = window.matchMedia('(min-width: 1024px)')
 const respoMainSlider = new Swiper('.respo-main-slider__container', {
-	// init: false,
+	init: false,
 	slideToClickedSlide: true,
 	slidesPerView: 'auto',
 	spaceBetween: 21,
@@ -163,6 +163,7 @@ const mainSliderRight = new Swiper('.sw-cntr-right', {
 window.addEventListener('load', () => {	
 	mainSliderRight.init()
 	mainSliderLeft.init()
+	respoMainSlider.init()
 	main.classList.add('loaded')
 	setTimeout(() => {
 		fullscreen.classList.add('hidden')
