@@ -13,11 +13,13 @@
 		<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" /> -->
 		<link rel="stylesheet" href="assets/css/style.css" />
 	</head>
+	
 	<body>
+		<div class="fullscreen"></div>
 		<!-- main -->
 		<main class="main">
 			<!-- header -->
-			<header class="header">
+			<header class="header load-hidden for-load">
 				<div class="header-content container">
 					<div class="header__left header__logo">
 						<svg
@@ -213,7 +215,7 @@
 
 
 			<!-- mobile slider -->
-			<div class="respo-main-slider">
+			<div class="respo-main-slider load-hidden">
 				<div class="respo-main-slider__container swiper-container">
 					<div class="swiper-wrapper">
 						<div class="swiper-slide">
@@ -242,14 +244,14 @@
 			<!-- /mobile slider -->
 
 			<!-- main slider -->
-			<div class="main__slider__container">
+			<div class="main__slider__container load-hidden">
 				<div class="main__slider">
 					<div class="sw-cntr-left-outter-outter">
 						<div class="sw-cntr-left-outter">
 							<div class="swiper-container sw-cntr-left">
 								<div class="swiper-wrapper">
 									<div class="swiper-slide">
-										<img src="assets/images/slider-image-1.jpg" alt="swiper-slide">
+										<img class="for-load" src="assets/images/slider-image-1.jpg" alt="swiper-slide">
 									</div>
 									<div class="swiper-slide">
 										<img src="assets/images/slider-image-3.jpg" alt="swiper-slide">
@@ -260,8 +262,8 @@
 								</div>
 								<div class="hidden-element"></div>
 					
-								<div class="swiper-pagination"></div>
-								<div class="go-nav">
+								<div class="swiper-paginationRightt swiper-pagination for-load"></div>
+								<div class="go-nav for-load">
 									<div class="go-nav-left">
 										<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" fill="rgba(255,255,255,0)"/><path d="M13.827,6.606a.841.841,0,0,1,.464.741v4.8H24.1a.849.849,0,1,1,0,1.7H14.291v4.8a.839.839,0,0,1-.464.741.942.942,0,0,1-.912-.024l-9.5-5.652a.824.824,0,0,1,0-1.435l9.5-5.652a.941.941,0,0,1,.912-.024Z" transform="translate(-1)" fill="#fff"/></svg>
 									</div>
@@ -277,7 +279,7 @@
 							<div class="swiper-container sw-cntr-right">
 								<div class="swiper-wrapper">
 									<div class="swiper-slide">
-										<img src="assets/images/slider-image-2.jpg" alt="swiper-slide">
+										<img class="for-load" src="assets/images/slider-image-2.jpg" alt="swiper-slide">
 									</div>
 									<div class="swiper-slide">
 										<img src="assets/images/slider-image-4.jpg" alt="swiper-slide">
@@ -297,12 +299,12 @@
 		<!-- /main -->
 
 		<!-- aboutus -->
-		<article class="aboutus">
-			<h1>ჩვენ შესახებ</h1>
+		<article class="aboutus" >
+			<h1 id="aboutus">ჩვენ შესახებ</h1>
 			<div class="aboutus__content">
 				<div class="aboutus__content__textbox">
 					<p>ცნობილი ფაქტია, რომ გვერდის წაკითხვად შიგთავსს შეუძლია მკითხველის ყურადღება მიიზიდოს და დიზაინის აღქმაში ხელი შეუშალოს. Lorem Ipsum-ის გამოყენებით ვღებულობთ იმაზე მეტ-ნაკლებად სწორი გადანაწილების ტექსტს, ვიდრე ერთიდაიგივე გამეორებადი სიტყვებია ხოლმე. შედეგად, ტექსტი ჩვეულებრივ ინგლისურს გავს, მისი წაითხვა კი შეუძლებელია. დღეს უამრავი პერსონალური საგამომცემლო პროგრამა და ვებგვერდი იყენებს Lorem Ipsum-ს, როგორც დროებით ტექსტს წყობის შესავსებად; Lorem Ipsum-ის მოძებნისას კი საძიებო სისტემები ბევრ დაუსრულებელ გვერდს გვიჩვენებენ. წლების მანძილზე ამ ტექსტის უამრავი ვერსია გამოჩნდა, ზოგი შემთხვევით დაშვებული შეცდომის გამო, ზოგი კი — განზრახ, ხუმრობით.</p>
-					<p>Lorem Ipsum საბეჭდი და ტიპოგრაფიული ინდუსტრიის უშინაარსო ტექსტია. იგი სტანდარტად 1500-იანი წლებიდან იქცა, როდესაც უცნობმა მბეჭდავმა ამწყობ დაზგაზე წიგნის საცდელი ეგზემპლარი დაბეჭდა. </p>
+					<p>Lorem Ipsum საბეჭდი და ტიპოგრაფიული ინდუსტრიის უშინაარსო ტექსტია. <span class="aboutus__content__textbox__blue">იგი სტანდარტად 1500-იანი წლებიდან იქცა</span>, როდესაც უცნობმა მბეჭდავმა ამწყობ დაზგაზე წიგნის საცდელი ეგზემპლარი დაბეჭდა. </p>
 				</div>
 				<div class="aboutus__content__imgbox">
 					<div class="img-outter">
@@ -314,6 +316,315 @@
 		</article>
 		<!-- /aboutus -->
 		
+		<!-- services -->
+		<article class="services aboutus">
+			<div class="aboutus__content">
+				<div class="aboutus__content__textbox__inservices">
+					<h1 id="services">სერვისები</h1>
+					<div class="aboutus__content__textbox">
+						<p>ცნობილი ფაქტია, რომ გვერდის წაკითხვად შიგთავსს შეუძლია მკითხველის ყურადღება მიიზიდოს და დიზაინის აღქმაში ხელი შეუშალოს. Lorem Ipsum-ის გამოყენებით ვღებულობთ იმაზე მეტ-ნაკლებად სწორი გადანაწილების ტექსტს, ვიდრე ერთიდაიგივე გამეორებადი სიტყვებია ხოლმე. შედეგად, ტექსტი ჩვეულებრივ ინგლისურს გავს, მისი წაითხვა კი შეუძლებელია. დღეს უამრავი პერსონალური საგამომცემლო პროგრამა და ვებგვერდი იყენებს Lorem Ipsum-ს, როგორც დროებით ტექსტს წყობის შესავსებად; Lorem Ipsum-ის მოძებნისას კი საძიებო სისტემები ბევრ დაუსრულებელ გვერდს გვიჩვენებენ. წლების მანძილზე ამ ტექსტის უამრავი ვერსია გამოჩნდა, ზოგი შემთხვევით დაშვებული შეცდომის გამო, ზოგი კი — განზრახ, ხუმრობით.</p>
+					</div>
+				</div>
+				<div class="aboutus__content__imgbox">
+					<div class="img-outter">
+						<img src="assets/images/project-images/Rectangle 7.jpg" alt="cover">
+						<div class="aboutus__content__imgbox__bgblue"></div>
+					</div>
+				</div>
+			</div>
+		</article>
+		<!-- /services -->
+
+		<!-- projets -->
+		<section class="projects" id="projects">
+			<h1>პროექტები</h1>
+			<div class="projects__bluebg"><div class="forunion"></div></div>
+			<div class="projects-slider swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<img src="assets/images/project-images/Rectangle 18.jpg" alt="">
+						<h2>ჩვენი მიმდინარე პროექტი რომელიც 
+							შენდება დიდუბეში, წერეთლის 
+							143 ნომერში</h2>
+					</div>
+					<div class="swiper-slide">
+						<img src="assets/images/project-images/Rectangle 19.jpg" alt="">
+						<h2>ჩვენი მიმდინარე პროექტი რომელიც 
+							შენდება დიდუბეში, წერეთლის 
+							143 ნომერში</h2>
+					</div>
+					<div class="swiper-slide">
+						<img src="assets/images/project-images/Rectangle 20.jpg" alt="">
+						<h2>ჩვენი მიმდინარე პროექტი რომელიც 
+							შენდება დიდუბეში, წერეთლის 
+							143 ნომერში</h2>
+					</div>
+					<div class="swiper-slide">
+						<img src="assets/images/project-images/Rectangle 21.jpg" alt="">
+						<h2>ჩვენი მიმდინარე პროექტი რომელიც 
+							შენდება დიდუბეში, წერეთლის 
+							143 ნომერში</h2>
+					</div>
+					<div class="swiper-slide">
+						<img src="assets/images/project-images/Rectangle 18.jpg" alt="">
+						<h2>ჩვენი მიმდინარე პროექტი რომელიც 
+							შენდება დიდუბეში, წერეთლის 
+							143 ნომერში</h2>
+					</div>
+					<div class="swiper-slide">
+						<img src="assets/images/project-images/Rectangle 19.jpg" alt="">
+						<h2>ჩვენი მიმდინარე პროექტი რომელიც 
+							შენდება დიდუბეში, წერეთლის 
+							143 ნომერში</h2>
+					</div>
+					<div class="swiper-slide">
+						<img src="assets/images/project-images/Rectangle 20.jpg" alt="">
+						<h2>ჩვენი მიმდინარე პროექტი რომელიც 
+							შენდება დიდუბეში, წერეთლის 
+							143 ნომერში</h2>
+					</div>
+					<div class="swiper-slide">
+						<img src="assets/images/project-images/Rectangle 21.jpg" alt="">
+						<h2>ჩვენი მიმდინარე პროექტი რომელიც 
+							შენდება დიდუბეში, წერეთლის 
+							143 ნომერში</h2>
+					</div>
+				</div>
+				<div class="projectSliderPagination swiper-pagination"></div>
+
+			</div>
+			<div class="other-projects-outter">
+				<a class="other-projects" href="#" >სხვა პროექტები</a>
+			</div>
+		</section>
+		<!-- /projets -->
+
+		<!-- partners -->
+		<section class="partners" id="partners">
+			<h1>პარტნიორები</h1>
+			<div class="partners__content">
+				<div class="partners__content__textbox">
+					<p>Lorem Ipsum საბეჭდი და ტიპოგრაფიული ინდუსტრიის უშინაარსო ტექსტია. <span class="partners__content__textbox__blue">იგი სტანდარტად 1500-იანი წლებიდან იქცა</span>, როდესაც უცნობმა მბეჭდავმა ამწყობ დაზგაზე წიგნის საცდელი ეგზემპლარი დაბეჭდა.</p>
+				</div>
+				<div class="partners__content__logosRespo">
+					<div class="partners-sliderRespo swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<a href="#" target="_blank"><img src="assets/images/partners/building-company.svg" alt=""></a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#" target="_blank"><img src="assets/images/partners/precision.svg" alt=""></a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#" target="_blank"><img src="assets/images/partners/ascent.svg" alt=""></a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#" target="_blank"><img src="assets/images/partners/building-company.svg" alt=""></a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#" target="_blank"><img src="assets/images/partners/precision.svg" alt=""></a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#" target="_blank"><img src="assets/images/partners/ascent.svg" alt=""></a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#" target="_blank"><img src="assets/images/partners/building-company.svg" alt=""></a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#" target="_blank"><img src="assets/images/partners/precision.svg" alt=""></a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#" target="_blank"><img src="assets/images/partners/ascent.svg" alt=""></a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#" target="_blank"><img src="assets/images/partners/building-company.svg" alt=""></a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#" target="_blank"><img src="assets/images/partners/precision.svg" alt=""></a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#" target="_blank"><img src="assets/images/partners/ascent.svg" alt=""></a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#" target="_blank"><img src="assets/images/partners/building-company.svg" alt=""></a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#" target="_blank"><img src="assets/images/partners/precision.svg" alt=""></a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#" target="_blank"><img src="assets/images/partners/ascent.svg" alt=""></a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#" target="_blank"><img src="assets/images/partners/building-company.svg" alt=""></a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#" target="_blank"><img src="assets/images/partners/precision.svg" alt=""></a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#" target="_blank"><img src="assets/images/partners/ascent.svg" alt=""></a>
+							</div>
+						</div>
+					</div>
+					<div class="partners__content__logosRespo__pagination"></div>
+				</div>
+				<div class="partners__content__logos">
+					<div class="partners__content__logos__pagination swiper-pagination"></div>
+					<div class="partners_slider swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="swiper-slide-inside">
+									<a href="#" target="_blank"><img src="assets/images/partners/building-company.svg" alt=""></a>
+								</div>
+								<div class="swiper-slide-inside">
+									<a href="#" target="_blank"><img src="assets/images/partners/precision.svg" alt=""></a>
+								</div>
+								<div class="swiper-slide-inside">
+									<a href="#" target="_blank"><img src="assets/images/partners/ascent.svg" alt=""></a>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="swiper-slide-inside">
+									<a href="#" target="_blank"><img src="assets/images/partners/building-company.svg" alt=""></a>
+								</div>
+								<div class="swiper-slide-inside">
+									<a href="#" target="_blank"><img src="assets/images/partners/precision.svg" alt=""></a>
+								</div>
+								<div class="swiper-slide-inside">
+									<a href="#" target="_blank"><img src="assets/images/partners/ascent.svg" alt=""></a>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="swiper-slide-inside">
+									<a href="#" target="_blank"><img src="assets/images/partners/building-company.svg" alt=""></a>
+								</div>
+								<div class="swiper-slide-inside">
+									<a href="#" target="_blank"><img src="assets/images/partners/precision.svg" alt=""></a>
+								</div>
+								<div class="swiper-slide-inside">
+									<a href="#" target="_blank"><img src="assets/images/partners/ascent.svg" alt=""></a>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="swiper-slide-inside">
+									<a href="#" target="_blank"><img src="assets/images/partners/building-company.svg" alt=""></a>
+								</div>
+								<div class="swiper-slide-inside">
+									<a href="#" target="_blank"><img src="assets/images/partners/precision.svg" alt=""></a>
+								</div>
+								<div class="swiper-slide-inside">
+									<a href="#" target="_blank"><img src="assets/images/partners/ascent.svg" alt=""></a>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="swiper-slide-inside">
+									<a href="#" target="_blank"><img src="assets/images/partners/building-company.svg" alt=""></a>
+								</div>
+								<div class="swiper-slide-inside">
+									<a href="#" target="_blank"><img src="assets/images/partners/precision.svg" alt=""></a>
+								</div>
+								<div class="swiper-slide-inside">
+									<a href="#" target="_blank"><img src="assets/images/partners/ascent.svg" alt=""></a>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="swiper-slide-inside">
+									<a href="#" target="_blank"><img src="assets/images/partners/building-company.svg" alt=""></a>
+								</div>
+								<div class="swiper-slide-inside">
+									<a href="#" target="_blank"><img src="assets/images/partners/precision.svg" alt=""></a>
+								</div>
+								<div class="swiper-slide-inside">
+									<a href="#" target="_blank"><img src="assets/images/partners/ascent.svg" alt=""></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- /partners -->
+		
+
+		<!-- respomenu -->
+		<section class="respomenu" id="respomenu">
+			<div class="respomenu__burger">
+				<div class="burger-container" id="burger">
+					<div class="burger">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<nav class="respomenu__nav">
+			<ul>
+				<li><a href="#">მთავარი</a></li>
+				<li><a href="#aboutus">ჩვენ შესახებ</a></li>
+				<li><a href="#services">სერვისები</a></li>
+				<li><a href="#projects">პროექტები</a></li>
+				<li><a href="#partners">პარტნიორები</a></li>
+				<li><a href="#contact">კონტაქტი</a></li>
+			</ul>
+		</nav>
+		<!-- /respomenu -->
+
+		<!-- footer -->
+		<footer class="footer" id="contact">
+			<div class="footer__content">
+				<div class="footer__content__left contacts">
+					<h1>კონტაქტი</h1>
+					<div class="footer__content__left__textbox">
+						<p>Lorem Ipsum საბეჭდი და ტიპოგრაფიული ინდუსტრიის უშინაარსო ტექსტია. იგი სტანდარტად 1500-იანი წლებიდან იქცა, როდესაც უცნობმა მბეჭდავმა ამწყობ დაზგაზე წიგნის საცდელი ეგზემპლარი დაბეჭდა. </p>
+					</div>
+					<div class="map">
+						<div class="map__whitebg"></div>
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2979.5583868947147!2d44.824665015075006!3d41.6868799853385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40440c513e6b35b3%3A0x1378e41f51cbabc9!2s8%20Bochorma%20St%2C%20T'bilisi!5e0!3m2!1sen!2sge!4v1609924144831!5m2!1sen!2sge" frameborder="0" style="border:0;" allowfullscreen="true" aria-hidden="false" tabindex="0"></iframe>
+					</div>
+					<div class="footer__content__left__links">
+						<a href="tel:+995 555 444 333"><span>
+							<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26"><g transform="translate(-262 -5434)"><rect width="26" height="26" transform="translate(262 5434)" fill="rgba(255,255,255,0)"/><path d="M19.783,15.618a2.507,2.507,0,0,0-1.841.484c-.53.309-1.538,1.126-2.116.917a13.125,13.125,0,0,1-6.944-6.776c-.212-.59.6-1.6.908-2.141a2.569,2.569,0,0,0,.48-1.854A15.076,15.076,0,0,0,7.708,2.677,2.1,2.1,0,0,0,6.423,2c-1.651-.071-3.5,2.133-3.819,2.66-.81,1.124-.806,2.62.014,4.433,1.975,4.871,9.444,12.223,14.334,14.272A5.908,5.908,0,0,0,19.42,24a3.211,3.211,0,0,0,1.926-.6c.419-.241,2.713-2.177,2.652-3.873a2.135,2.135,0,0,0-.668-1.283A15.185,15.185,0,0,0,19.783,15.618Z" transform="translate(262 5434)" fill="#0a22f4"/></g></svg>
+						</span>+995 555 444 333</a>
+						<a href="mailto:example@gmail.com"><span>
+							<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26"><g transform="translate(-633 -5433)"><rect width="26" height="26" transform="translate(633 5433)" fill="rgba(255,255,255,0)"/><path d="M18.433,3a5.535,5.535,0,0,1,3.938,1.646A5.626,5.626,0,0,1,24,8.611v8.778A5.591,5.591,0,0,1,18.433,23H7.566A5.591,5.591,0,0,1,2,17.389V8.611A5.583,5.583,0,0,1,7.566,3Zm1.75,7.267.088-.089a.866.866,0,0,0-.012-1.111.922.922,0,0,0-.582-.289A.831.831,0,0,0,19.06,9L14.1,13a1.71,1.71,0,0,1-2.2,0L6.95,9a.831.831,0,0,0-1.1.078.855.855,0,0,0-.078,1.111l.144.144,5.005,3.944a3.437,3.437,0,0,0,4.3,0Z" transform="translate(633 5433)" fill="#0a22f4" fill-rule="evenodd"/></g></svg>
+						</span>example@gmail.com</a>
+					</div>
+				</div>
+				<div class="footer__content__right">
+					<form action="" class="contactForm">
+						<label for="name">სახელი, გვარი:</label>
+						<div class="input-div">
+							<input type="text" name="name" id="name" placeholder=" ">
+						</div>
+						<label for="email">ელ. ფოსტა:</label>
+						<div class="input-div">
+							<input type="text" name="email" id="email" placeholder=" ">
+						</div>
+						<label for="tel">ტელ:</label>
+						<div class="input-div">
+							<input type="number" name="tel" id="tel" placeholder=" ">
+						</div>
+						<label for="textfield">შეტყობინება</label>
+						<textarea name="textfield" id="textfield" placeholder=" "></textarea>
+						<button class="submit_button" type="submit">გაგზავნა</button>
+					</form>
+				</div>
+			</div>
+			<div class="footer__hr"></div>
+			<div class="footer__realfooter">
+				<div class="footer__realfooter__left">ყველა უფლება დაცულია</div>
+				<div class="footer__realfooter__right">
+					<p>დამზადებულია <span>
+						<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26"><g transform="translate(-1513 -5671)"><rect width="26" height="26" transform="translate(1513 5671)" fill="rgba(255,255,255,0)"/><path d="M21.982,5.24A6.8,6.8,0,0,0,13,4.518,6.782,6.782,0,0,0,3.658,5.579a7.2,7.2,0,0,0,.368,9.628l6.833,7.013a3.006,3.006,0,0,0,4.291,0l6.833-7.013a7.194,7.194,0,0,0,0-9.967Zm-1.551,8.411-6.833,7a.822.822,0,0,1-1.188,0L5.577,13.617a4.923,4.923,0,0,1,0-6.765,4.618,4.618,0,0,1,6.6,0,1.082,1.082,0,0,0,1.562,0,4.618,4.618,0,0,1,6.6,0,4.923,4.923,0,0,1,.088,6.765Z" transform="translate(1513.012 5670.879)" fill="#f40a40"/><path d="M1532.562,5676.434l-6.879.35-6.765-.534-3.111,5.812,9.876,10.807,8.757-8.221,1.052-5.374Z" fill="#f40a40" stroke="#f40a40" stroke-width="1"/></g></svg>
+					</span> -ით</p>
+					<a href="https://smartweb.ge/" class="footer__realfooter__right__smartweb">
+						<img src="assets/images/smartweb.svg" alt="smartweb logo">
+					</a>
+				</div>
+			</div>
+		</footer>
+		<!-- /footer -->
+
 		<!-- scripts -->
 		<script src="assets/js/swiper-bundle.min.js"></script>
 		<!-- <script src="assets/js/jquery-3.2.1.min.js"></script> -->

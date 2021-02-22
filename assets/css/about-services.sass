@@ -1,0 +1,97 @@
+.aboutus
+    color: $black
+    padding: 0 20px
+    @include plus1025()
+        padding: 0
+        &:not(.services)
+            padding-left: $padL
+    h1
+        text-transform: uppercase
+        margin-bottom: 30px
+        @include upperCase(true)        
+        font-size: 18px
+        line-height: 21px
+        @include plus1025()
+            margin-bottom: 3.75rem
+            font-size: 2rem
+            line-height: 2.3125rem
+    
+    &.services
+        .aboutus__content
+            @include plus1025()
+                grid-template-columns: 1fr calc(24.1vw + 22.625rem)
+                &__imgbox   
+                    order: -1
+    &__content
+        display: flex
+        flex-direction: column-reverse
+        @include plus1025()
+            display: grid
+            grid-template-columns: 24.1vw 1fr
+            grid-gap: 8.5625rem
+        
+        &__textbox
+            font-size: 14px
+            line-height: 1.625rem
+            font-family: rmn
+            @include plus1025()
+                font-size: 1rem
+            p
+                margin-bottom: 20px
+                @include plus1025()
+                    margin-bottom: 3.125rem
+            &__blue
+                color: $blue
+                font-family: bld
+        &__imgbox
+            height: 180px
+            overflow: visible      
+            margin-bottom: 30px
+            @include plus1025()
+                margin-bottom: unset
+                padding-top: 7.625rem
+                height: 100%
+                padding-right: 35%
+                padding-bottom: 24.375rem
+                overflow: hidden
+                &__bgblue
+                    position: absolute
+                    border-radius: 15px
+                    width: 100%
+                    height: 100%
+                    top: 0
+                    right: 0
+                    background-color: $blue
+                    transform: translate(0.625rem, 0.625rem)
+                    z-index: -1
+
+            .img-outter
+                height: 100%
+                width: 100%
+                @include plus1025()
+                    position: relative
+                    
+                
+                img
+                    width: 100%
+                    object-fit: cover
+                    height: 100%
+                    border-radius: 15px
+.aboutus:not(.services)
+    .img-outter
+        @include plus1025()
+            @include leftGradientEffectDownRight()
+
+.services
+    .aboutus__content__textbox
+        @include plus1025()
+            padding-right: 22.625rem
+    .aboutus__content__imgbox
+        padding-right: 0
+        padding-left: $padL
+        .aboutus__content__imgbox__bgblue
+            transform: translate(-0.625rem, 0.625rem)
+    .img-outter
+        @include plus1025()
+            @include leftGradientEffectDownLeft()
+            

@@ -1,71 +1,85 @@
+.fullscreen
+    position: absolute
+    right: 0
+    top: 0
+    width: 100%
+    height: 100vh
+    z-index: 2
+    background-color: #fff
+    &.hidden
+        display: none
 // generals
 @import fonts
 @import variables
 @import defaults
-
+.fullscreen
+    @include plus1025()
+        display: flex
+.load-hidden
+    opacity: 0
 *
     scroll-behavior: smooth
 body
-    height: 300vh
 
 .swiper-notification
     display: none
 
+.sw-cntr-left
+    @include plus1025()
+        img.for-load
+            transform-origin: left
+            &.loaded
+                animation-duration: 1.6s
+                animation-name: leftimg
+                animation-timing-function: ease-out
+.sw-cntr-right
+    @include plus1025()
+        img.for-load
+            transform-origin: top
+            &.loaded
+                animation-duration: 1.6s
+                animation-name: rightimg
+                animation-timing-function: ease-out
+.swiper-paginationRightt, .go-nav
+    @include plus1025()
+        &.for-load
+            &.loaded
+                animation-duration: 1.6s
+                animation-name: pag
+                animation-timing-function: ease-out
+
+@keyframes pag
+    0%
+        transform: translateY(50vh)
+    100%
+        transform: translateY(0)
+
+@keyframes header
+    0%
+        transform: translateY(-100%)
+    100%
+        transform: translateY(0)
+
+
+@keyframes rightimg
+    0%
+        transform: scaleY(0)
+    100%
+        transform: scaleY(1)
+
+@keyframes leftimg
+    0%
+        transform: scaleX(0)
+    100%
+        transform: scaleX(1)
+
+
+
 // import components
 @import main
+@import about-services
+@import projects
+@import partners
+@import footer
+@import respo
 
-
-.aboutus
-    padding-left: $padL
-    color: $black
-    h1
-        text-transform: uppercase
-        margin-bottom: 30px
-        @include upperCase(true)        
-        font-size: 18px
-        line-height: 21px
-        @include plus1025()
-            margin-bottom: 3.75rem
-            font-size: 32px
-            line-height: 37px
-
-    &__content
-
-        @include plus1025()
-            display: grid
-            grid-template-columns: 24.1vw 1fr
-            grid-gap: 8.5625rem
-        &__textbox
-            font-size: 14px
-            line-height: 1.625rem
-            font-family: rmn
-            @include plus1025()
-                font-size: 1rem
-            p
-                margin-bottom: 20px
-                @include plus1025()
-                    margin-bottom: 3.125rem
-        &__imgbox
-            height: 100%
-            padding-top: 7.625rem
-            padding-right: 35%
-            .img-outter
-                position: relative
-                width: 100%
-                @include leftGradientEffectDown()
-                
-                img
-                    width: 100%
-                    border-radius: 15px
-                
-
-            &__bgblue
-                position: absolute
-                border-radius: 15px
-                width: 100%
-                height: 100%
-                top: 0
-                right: 0
-                background-color: $blue
-                transform: translate(0.625rem, 0.625rem)
-                z-index: -1

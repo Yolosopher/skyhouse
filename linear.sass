@@ -83,11 +83,41 @@ body
 
 .main
     width: 300px
-    height: 400px
+    height: 300px
     border-radius: 0 15px 0 0
     position: relative
     background: red
     border-radius: 15px
-    @include leftGradientEffectUp()
+    &::after
+        background: linear-gradient(270deg, #fff 0%, #fff 80%, $blue 100%) no-repeat
+        content: ''
+        width: 100%
+        height: 200%
+        display: block
+        position: absolute
+        // z-index: 1
+        left: 100%
+        top: 0
+        opacity: .7
+        // clip-path: polygon(1% 50%, 100% 1%, 100% 50%, 0% 100%)
+        clip-path: polygon(0 0, 100% 50%, 100% 100%, 0 50%)
+        
+        transform: translate(7px)
+    &::before
+        background: linear-gradient($blue 0%, #fff 20%, #fff 100%) no-repeat
+        content: ''
+        
+        width: 200%
+        height: 100%
+        display: block
+        position: absolute
+        // z-index: 1
+        left: 0
+        top: 100%
+        opacity: .7
+        
+        clip-path: polygon(0 0, 50% 0%, 100% 100%, 50% 100%)
+        transform: translate(7px)
+
     
 

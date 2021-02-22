@@ -1,0 +1,104 @@
+.respomenu__nav
+    display: flex
+    position: fixed
+    right: 0
+    top: 0
+    width: 100%
+    height: 0
+    align-items: flex-end
+    z-index: 998        
+    background-color: rgba($black, .3)
+    overflow: hidden
+    opacity: 0
+    padding: 0 20px
+    padding-bottom: 130px
+
+
+    transition: all .2s ease-out
+    @include plus1025()
+        display: none
+    ul
+        // display: flex
+        // flex-direction: column
+        // justify-content: space-between
+        // align-items: center
+        display: grid
+        grid-auto-rows: auto
+        grid-gap: 27px
+        justify-content: center
+        text-align: center
+        max-height: 0
+        overflow: hidden
+        padding: 38px 5px
+        background-color: $blue
+        color: #fff
+        width: 100%
+        border-radius: 15px
+        transition: all .2s ease-out
+        li
+            white-space: nowrap
+.respomenu
+    display: flex
+    justify-content: center
+    align-items: center
+
+    position: fixed
+    bottom: 40px
+    right: 50%
+    transform: translateX(50%)
+    width: 60px
+    height: 60px
+    border-radius: 50%
+    background-color: $blue
+    z-index: 999    
+    @include plus1025()
+        display: none
+    &.active
+        .burger
+            span
+                &:nth-child(1)
+                    transform: rotate(45deg)
+                    top: 6px
+                &:nth-child(2)
+                    width: 0
+                &:nth-child(3)
+                    transform: rotate(-45deg)
+                    top: 6px
+        + .respomenu__nav
+            height: 100%
+            opacity: 1
+            transition: all .2s ease-in
+            ul
+                max-height: 320px
+                transition: all .2s ease-in
+
+
+// burger
+.burger-container
+    // justify-self: flex-end
+    width: 32px
+    height: 32px
+    display: flex
+    justify-content: center
+    align-items: center
+.burger
+    display: block
+    height: 12px
+    position: relative
+    width: 18px
+    cursor: pointer
+    span
+        width: 18px
+        height: 2px
+        background-color: #fff
+        display: block
+        position: absolute
+        border-radius: 15px
+        transition-duration: .5s
+        &:nth-child(2)
+            top: 6px
+        &:nth-child(3)
+            top: 12px
+
+// burger end
+

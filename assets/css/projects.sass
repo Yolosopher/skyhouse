@@ -1,0 +1,144 @@
+.projects
+    position: relative
+    padding: 0 20px
+    padding-top: 29px
+    overflow: hidden
+    margin-bottom: 40px
+    @include plus1025()
+        margin-bottom: 17rem
+        padding: 0
+        padding-left: $padL
+        padding-top: 66px
+    h1
+        color: #fff
+        text-transform: uppercase
+        margin-bottom: 29px
+        @include upperCase(true)        
+        font-size: 18px
+        line-height: 21px
+        @include plus1025()
+            font-size: 2rem
+            line-height: 2.3125rem
+    .swiper-container
+        height: 225px
+        margin-bottom: 30px
+    
+        @include plus1025()
+            overflow: hidden
+            height: 29.375rem
+            margin-bottom: 4.3125rem
+            @include leftGradientEffectDownLeft()
+    .other-projects
+        background-color: $blue
+        border-radius: 28px
+        display: flex
+        justify-content: center
+        align-items: center
+        height: 56px
+        color: #fff
+        width: 100%    
+
+        font-size: 13px
+        line-height: 15px
+        text-transform: uppercase
+        @include upperCase(true)
+
+        
+        @include plus1025()
+            width: unset
+            height: unset
+            display: inline
+            border-radius: 0
+            background-color: initial
+            color: $black
+            padding-right: $padL
+            padding-left: 1.25rem
+            border-left: 1px solid $black
+    .other-projects-outter
+        text-align: right
+
+    .swiper-wrapper
+        height: 100%
+        width: 100%
+        display: flex
+    .foreffect
+        height: 100%
+        position: absolute
+        flex-shrink: 0
+        width: 66vw
+    .swiper-slide
+        height: 100%
+        position: relative
+        flex-shrink: 0
+        width: 66vw
+        img
+            height: 100%
+            width: 100%
+            border-radius: 15px
+            object-fit: cover
+        @include plus1025()   
+            width: 28.9375rem         
+            &:nth-of-type(even)
+                padding-bottom: 3.125rem
+                h2
+                    bottom: calc( 3.125rem + 10px )
+
+            &:nth-of-type(odd)
+                padding-top: 3.125rem
+                
+        
+        h2
+            position: absolute
+            z-index: 1
+            width: calc( 100% - 10px )
+            right: 5px
+            bottom: 5px
+            padding: 5px
+            background-color: #fff
+            display: inline-block
+            -webkit-backdrop-filter: blur(10px)
+            border-radius: 12px
+            @include upperCase(false)
+            text-transform: uppercase
+            font-size: 13px
+            color: $black
+            line-height: 15px
+            @include plus1025()
+                padding: 1.5625rem 1.875rem
+                width: calc( 100% - 20px )
+                right: 10px
+                bottom: 10px
+
+                font-size: 1.125rem
+                line-height: 1.3125rem
+
+    .projectSliderPagination
+        position: absolute
+        top: 5.25rem
+        right: $padL
+        display: none
+        grid-template-columns: repeat(auto-fit, 10px)
+        grid-gap: 20px
+        height: 26px
+        width: 400px
+        justify-items: flex-end
+        justify-content: flex-end
+        @include plus1025()
+            display: grid
+    &__bluebg
+        position: absolute
+        top: 0
+        right: 0
+        width: 100%
+        z-index: -1
+        background-color: $blue
+        height: 132px
+        @include plus1025()
+            height: 308px
+        .forunion
+            position: relative
+            height: 132px
+            @include plus1025()
+                height: 308px
+                background: url(../images/union.svg) no-repeat
+
