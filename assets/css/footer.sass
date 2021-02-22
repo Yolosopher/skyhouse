@@ -3,6 +3,7 @@
     background-color: $blue
     width: 100%
     overflow: hidden
+    position: relative
     color: #fff
 
     padding: 0 20px
@@ -13,7 +14,18 @@
         padding-top: 17rem
         // padding-left: $padL
         // padding-right: 14.875rem
-
+        &::after
+            content: ''
+            position: absolute
+            right: 0
+            top: 17rem
+            z-index: 0
+            width: 32rem
+            height: 32rem
+            border-radius: 50%
+            background: linear-gradient(#fff 0%, #fff 0%, #0a22f4 100%)
+            opacity: 0.1
+            transform: translate(25%, -90%)
     h1
         text-transform: uppercase
         margin-bottom: 1.875rem
@@ -126,10 +138,15 @@
                             margin-right: 6.25rem
 
         &__right
+            position: relative
+            z-index: 1
+
             form
                 max-width: 28.9375rem
                 display: flex
                 flex-direction: column
+                input
+                    color: #fff
             label
                 display: block
                 margin-bottom: 5px
