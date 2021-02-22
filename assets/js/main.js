@@ -133,7 +133,7 @@ window.addEventListener('resize', () => {
 	aboutImgHeightFix()
 })
 const mainSliderLeft = new Swiper('.sw-cntr-left', {
-	// effect: 'flip',
+	init: false,
 	slidesPerView: 1,
 	spaceBetween: 25,
 	grabCursor: true,
@@ -149,7 +149,7 @@ const mainSliderLeft = new Swiper('.sw-cntr-left', {
 })
 
 const mainSliderRight = new Swiper('.sw-cntr-right', {
-	// effect: 'flip',
+	init: false,
 	slidesPerView: 1,
 	spaceBetween: 25,
 	grabCursor: true,
@@ -160,7 +160,9 @@ const mainSliderRight = new Swiper('.sw-cntr-right', {
 		swiper: mainSliderLeft,
 	},
 })
-window.addEventListener('load', () => {
+window.addEventListener('load', () => {	
+	mainSliderRight.init()
+	mainSliderLeft.init()
 	main.classList.add('loaded')
 	setTimeout(() => {
 		fullscreen.classList.add('hidden')
