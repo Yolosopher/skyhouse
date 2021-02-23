@@ -49,9 +49,9 @@ const projectsSlider = new Swiper('.projects-slider', {
 	},
 	breakpoints: {
 		1025: {
-			spaceBetween: 25
-		}
-	}
+			spaceBetween: 25,
+		},
+	},
 })
 const partnerssSlider = new Swiper('.partners_slider', {
 	slideToClickedSlide: true,
@@ -87,47 +87,75 @@ const partnerssSliderRespo = new Swiper('.partners-sliderRespo', {
 		el: '.partners__content__logosRespo__pagination',
 	},
 })
-
-respoMainSlider.slideNext()
 if (!matchmadia) {
 	// respoMainSlider.init()
 }
-const headerBotFixer = (headerMinSize) => {
+const headerBotFixer = (headerMinSize, projectin=false) => {
 	if (window.innerWidth > 1024) {
-		let vhMinusHeader = window.innerHeight - headerMinSize
-		let vhMinusHeaderMax = window.innerHeight - 130
-		let height =
-			window.pageYOffset >= vhMinusHeader
-				? headerMinSize
-				: window.innerHeight - window.pageYOffset
-
-		let transformTop = window.innerHeight - height
-
-		let offsett =
-			window.pageYOffset >= window.innerHeight
-				? window.innerHeight
-				: window.pageYOffset
-
-		main.style.height = `${height}px`
-		document.querySelector(
-			'body'
-		).style.marginTop = `calc(${window.innerHeight}px + ${11}rem)`
-		if (window.pageYOffset > vhMinusHeaderMax) {
-			main.classList.add('scrolled')
+		if (!projectin) {
+			let vhMinusHeader = window.innerHeight - headerMinSize
+			let vhMinusHeaderMax = window.innerHeight - 130
+			let height =
+				window.pageYOffset >= vhMinusHeader
+					? headerMinSize
+					: window.innerHeight - window.pageYOffset
+	
+			let transformTop = window.innerHeight - height
+	
+			let offsett =
+				window.pageYOffset >= window.innerHeight
+					? window.innerHeight
+					: window.pageYOffset
+	
+			main.style.height = `${height}px`
+			document.querySelector('body').style.marginTop = `calc(${
+				window.innerHeight
+			}px + ${11}rem)`
+			if (window.pageYOffset > vhMinusHeaderMax) {
+				main.classList.add('scrolled')
+			} else {
+				main.classList.remove('scrolled')
+			}
 		} else {
-			main.classList.remove('scrolled')
+			let vhMinusHeader = 387.56 - headerMinSize
+			let vhMinusHeaderMax = 387.56 - 130
+			let height =
+				window.pageYOffset >= vhMinusHeader
+					? headerMinSize
+					: 387.56 - window.pageYOffset
+	
+			let transformTop = 387.56 - height
+	
+			let offsett =
+				window.pageYOffset >= 387.56
+					? 387.56
+					: window.pageYOffset
+	
+			main.style.height = `${height}px`
+			document.querySelector('body').style.marginTop = `calc(${
+				387.56
+			}px + ${11}rem)`
+			if (window.pageYOffset > vhMinusHeaderMax) {
+				main.classList.add('scrolled')
+			} else {
+				main.classList.remove('scrolled')
+			}
 		}
 	}
 }
 
 const aboutImgHeightFix = () => {
 	const img = document.querySelector('.img-outter img')
-	const offWidth = img.offsetWidth
-	img.style.height = offWidth
+	if (img) {
+		const offWidth = img.offsetWidth
+		img.style.height = offWidth
+	}
 }
 
 window.addEventListener('scroll', () => {
-	headerBotFixer(65)
+	if (!main.classList.contains('projectin-main')) {
+		headerBotFixer(65)
+	}
 })
 window.addEventListener('resize', () => {
 	aboutImgHeightFix()
@@ -160,32 +188,65 @@ const mainSliderRight = new Swiper('.sw-cntr-right', {
 		swiper: mainSliderLeft,
 	},
 })
-window.addEventListener('load', () => {	
-	mainSliderRight.init()
-	mainSliderLeft.init()
-	respoMainSlider.init()
-	main.classList.add('loaded')
-	setTimeout(() => {
-		fullscreen.classList.add('hidden')
-		loadhiddens.forEach(loadhidden => {
-			loadhidden.classList.remove('load-hidden')
-		})
-	}, 801)
-	setTimeout(() => {
-		forloads.forEach(forload => {
-			forload.classList.add('loaded')
-		})
-	}, 800)
-	setTimeout(() => {
-		forloads.forEach(forload => {
-			forload.classList.remove('loaded')
-			forload.classList.remove('for-load')
-			// main.classList.remove('loaded')
-		})
-	}, 2400);
-	aboutImgHeightFix()
+
+// PROJECTINNNNNNNNNNN
+
+const mainSliderThumbs = new Swiper('.thumbslider', {
+	init: false,
+	slidesPerView: 3,
+	spaceBetween: 25,
+	grabCursor: true,
+	breakpoints: {
+		1025: {
+			slidesPerView: 5,
+		}
+	}
+})
+
+const mainSliderSingle = new Swiper('.singleslider', {
+	init: false,
+	slidesPerView: 1,
+	spaceBetween: 25,
+	grabCursor: true,
+	thumbs: {
+		swiper: mainSliderThumbs,
+	},
+})
+
+// /PROJECTINNNNNNNNNNN
+
+window.addEventListener('load', () => {
+	if (!main.classList.contains('projectin-main')) {
+		mainSliderRight.init()
+		mainSliderLeft.init()
+		respoMainSlider.init()
+		respoMainSlider.slideNext()
+		main.classList.add('loaded')
+		setTimeout(() => {
+			fullscreen.classList.add('hidden')
+			loadhiddens.forEach((loadhidden) => {
+				loadhidden.classList.remove('load-hidden')
+			})
+		}, 801)
+		setTimeout(() => {
+			forloads.forEach((forload) => {
+				forload.classList.add('loaded')
+			})
+		}, 800)
+		setTimeout(() => {
+			forloads.forEach((forload) => {
+				forload.classList.remove('loaded')
+				forload.classList.remove('for-load')
+				// main.classList.remove('loaded')
+			})
+		}, 2400)
+
+		aboutImgHeightFix()
+	} else {
+		mainSliderThumbs.init()
+		mainSliderSingle.init()
+	}
 })
 burger.addEventListener('click', () => {
 	respomenu.classList.toggle('active')
 })
-

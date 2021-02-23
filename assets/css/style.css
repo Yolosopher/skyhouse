@@ -359,6 +359,112 @@ body.noscroll {
   }
 }
 
+.main.projectin-main {
+  position: relative !important;
+  -webkit-clip-path: none !important;
+          clip-path: none !important;
+  margin-bottom: 491px !important;
+  padding-top: 135px !important;
+  overflow: visible !important;
+}
+
+@media screen and (min-width: 1025px) {
+  .main.projectin-main {
+    padding-top: 215px !important;
+    margin-bottom: 830px !important;
+    height: 387px;
+  }
+}
+
+.main.projectin-main h1 {
+  color: #171717;
+  font-family: mtavruli !important;
+  text-transform: uppercase !important;
+  font-weight: 500 !important;
+  text-transform: uppercase;
+  font-weight: 600 !important;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: left;
+}
+
+@media screen and (min-width: 1025px) {
+  .main.projectin-main h1 {
+    font-size: 1.75rem;
+    line-height: 2rem;
+  }
+}
+
+.main.projectin-main .header {
+  top: 0;
+}
+
+.main.projectin-main .projectin-main__singleslider {
+  padding: 0 20px;
+  margin-bottom: 37px;
+  overflow: hidden;
+}
+
+.main.projectin-main .projectin-main__singleslider .swiper-wrapper {
+  margin-bottom: 16px;
+  height: 210px;
+}
+
+@media screen and (min-width: 1025px) {
+  .main.projectin-main .projectin-main__singleslider {
+    margin: 0 auto;
+    max-width: 62%;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 3.75rem;
+  }
+  .main.projectin-main .projectin-main__singleslider .swiper-wrapper {
+    height: 37.5rem !important;
+    margin-bottom: 27px;
+  }
+}
+
+.main.projectin-main .projectin-main__thumbslider {
+  padding: 0 20px;
+  overflow: hidden;
+  height: 70px !important;
+}
+
+@media screen and (min-width: 1025px) {
+  .main.projectin-main .projectin-main__thumbslider {
+    margin: 0 auto;
+    max-width: 62%;
+    width: 100%;
+    padding: 0;
+    height: 220px !important;
+  }
+}
+
+.main.projectin-main .singleslider, .main.projectin-main .thumbslider {
+  height: 100%;
+}
+
+.main.projectin-main .swiper-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+
+.main.projectin-main .swiper-slide {
+  height: 100%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.main.projectin-main .swiper-slide img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px;
+}
+
 .main__slider {
   margin: 0 auto;
   -ms-grid-columns: 42% 1fr;
@@ -2101,6 +2207,10 @@ textarea {
   }
 }
 
+.input-div.invalid.invalid-shown input, .input-div.invalid.invalid-shown textarea {
+  border-color: red;
+}
+
 .respomenu__nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2163,6 +2273,7 @@ textarea {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border: 1px solid #fff;
   position: fixed;
   bottom: 40px;
   right: 50%;
@@ -2249,5 +2360,73 @@ textarea {
 
 .burger span:nth-child(3) {
   top: 12px;
+}
+
+.prdescription {
+  margin-bottom: 40px;
+  padding: 0 20px;
+}
+
+@media screen and (min-width: 1025px) {
+  .prdescription {
+    max-width: calc(49% + 40px);
+    margin: 0 auto;
+    width: 100%;
+    margin-bottom: 11.25rem;
+  }
+}
+
+.prdescription__textbox {
+  font-size: 14px;
+  line-height: 1.625rem;
+  font-family: rmn;
+}
+
+@media screen and (min-width: 1025px) {
+  .prdescription__textbox {
+    font-size: 1rem;
+  }
+}
+
+.prdescription__textbox p {
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 1025px) {
+  .prdescription__textbox p {
+    margin-bottom: 3.125rem;
+  }
+}
+
+.prdescription__textbox__blue {
+  color: #0A22F4;
+  font-family: bld;
+}
+
+.prdescription__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.prdescription__link__moreinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 3.5rem;
+  color: #fff;
+  width: 100%;
+  max-width: 21.25rem;
+  background-color: #0A22F4;
+  border-radius: 28px;
 }
 /*# sourceMappingURL=style.css.map */

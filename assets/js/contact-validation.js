@@ -1,14 +1,10 @@
-const nameInput = document.getElementById('contact-name')
-const subjectInput = document.getElementById('contact-subject')
-const mailInput = document.getElementById('contact-email')
-const textArea = document.getElementById('contact-textarea')
-const telContactInput = document.getElementById('contact-tel')
+const nameInput = document.getElementById('name')
+const mailInput = document.getElementById('email')
+const textArea = document.getElementById('textfield')
+const telContactInput = document.getElementById('tel')
 
 nameInput.addEventListener('change', () => {
-	checkTextPut(nameInput)
-})
-subjectInput.addEventListener('change', () => {
-	checkTextContactPut(subjectInput)
+	checkTextContactPut(nameInput)
 })
 mailInput.addEventListener('change', () => {
 	checkEmailContactPut(mailInput)
@@ -84,14 +80,6 @@ const checkTelContactPut = (telPut) => {
 		parent.classList.add('invalid-shown')
 	}
 }
-// check all asap
-let allTogether = [nameInput, mailInput, textArea, telInput]
-allTogether.forEach((each) => {
-	let val = each.value
-	if (val.length > 1) {
-		each.parentElement.classList.remove('invalid')
-	}
-})
 
 // submit validation
 const formsContact = document.querySelectorAll('form')

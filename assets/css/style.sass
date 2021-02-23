@@ -21,6 +21,8 @@
     scroll-behavior: smooth
 body
 
+
+// ANIMATION STUFF
 .swiper-notification
     display: none
 
@@ -82,3 +84,39 @@ body
 @import partners
 @import footer
 @import respo
+
+.prdescription
+    margin-bottom: 40px
+    padding: 0 20px
+    @include plus1025()
+        
+        max-width: calc(49% + 40px)
+        margin: 0 auto
+        width: 100%
+        margin-bottom: 11.25rem
+    &__textbox
+        font-size: 14px
+        line-height: 1.625rem
+        font-family: rmn
+        @include plus1025()
+            font-size: 1rem
+        p
+            margin-bottom: 20px
+            @include plus1025()
+                margin-bottom: 3.125rem
+        &__blue
+            color: $blue
+            font-family: bld
+    &__link
+        display: flex
+        justify-content: center
+        &__moreinfo
+            display: flex
+            justify-content: center
+            align-items: center
+            height: 3.5rem
+            color: #fff
+            width: 100%
+            max-width: 21.25rem
+            background-color: $blue
+            border-radius: 28px
