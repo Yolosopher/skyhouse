@@ -194,11 +194,12 @@ const mainSliderRight = new Swiper('.sw-cntr-right', {
 const mainSliderThumbs = new Swiper('.thumbslider', {
 	init: false,
 	slidesPerView: 3,
-	spaceBetween: 25,
+	spaceBetween: 10,
 	grabCursor: true,
 	breakpoints: {
 		1025: {
 			slidesPerView: 5,
+			spaceBetween: 25,
 		}
 	}
 })

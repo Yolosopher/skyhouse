@@ -363,7 +363,7 @@ body.noscroll {
   position: relative !important;
   -webkit-clip-path: none !important;
           clip-path: none !important;
-  margin-bottom: 491px !important;
+  margin-bottom: 411px !important;
   padding-top: 135px !important;
   overflow: visible !important;
 }
@@ -427,7 +427,7 @@ body.noscroll {
 .main.projectin-main .projectin-main__thumbslider {
   padding: 0 20px;
   overflow: hidden;
-  height: 70px !important;
+  height: 110px !important;
 }
 
 @media screen and (min-width: 1025px) {
