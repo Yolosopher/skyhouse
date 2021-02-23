@@ -21,6 +21,7 @@ const respoMainSlider = new Swiper('.respo-main-slider__container', {
 	loop: true,
 	autoplay: {
 		delay: 3500,
+		disableOnInteraction: false,
 	},
 	keyboard: {
 		enabled: true,
@@ -38,6 +39,7 @@ const projectsSlider = new Swiper('.projects-slider', {
 	loop: true,
 	autoplay: {
 		delay: 3500,
+		disableOnInteraction: false,
 	},
 	keyboard: {
 		enabled: true,
@@ -59,6 +61,7 @@ const partnerssSlider = new Swiper('.partners_slider', {
 	loop: true,
 	autoplay: {
 		delay: 3500,
+		disableOnInteraction: false,
 	},
 	keyboard: {
 		enabled: true,
@@ -75,6 +78,7 @@ const partnerssSliderRespo = new Swiper('.partners-sliderRespo', {
 	loop: true,
 	autoplay: {
 		delay: 3500,
+		disableOnInteraction: false,
 	},
 	keyboard: {
 		enabled: true,
